@@ -88,7 +88,7 @@ export const ContactForm = () => {
     <>
       <form onSubmit={handleSubmit}>
         <input type='text' value={name} name='name' onChange={e=> {setName(e.target.value); setDuplicate(false)}} placeholder='Name' required />
-        <input type='tel' value = {phone} name='phone' onChange={e => setPhone(e.target.value)} pattern = "^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="Phone" required/>
+        <input type='tel' value = {phone} name='phone' onChange={e => setPhone(e.target.value)} pattern = "^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="Phone xxx-xxx-xxxx" required/>
         <input type='email' value={email} name = 'email' onChange={e => setEmail(e.target.value)} placeholder="Email" required/>
         {renderError()}
         <input type='submit' />
