@@ -26,7 +26,7 @@ export const AppointmentsPage = () => {
     dispatch(getContacts(currentUserID));
     dispatch(getAppointments(currentUserID));
     dispatch(setCurrentUserId(currentUserID));
-  });
+  },[dispatch,currentUserID]);
  
   const renderAppointmentHeader = () =>{
     if(currentAppointmentId){

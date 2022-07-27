@@ -7,11 +7,8 @@ import { contactsStateSelector, currentIdSelector, getContacts} from "../../stor
 import { useDispatch } from "react-redux";
 import { getAppointments } from "../../store/appointmentsSlice";
 import { setCurrentUserId } from "../../store/authSlice";
-import { useNavigate } from "react-router";
-import { logOut } from "../../store/authSlice";
-import { clearAppointments } from "../../store/appointmentsSlice";
-import { clearContacts } from "../../store/contactsSlice";
-import decode from 'jwt-decode';
+
+
 import './ContactsPage.css'
 export const ContactsPage = () => {
   const usernameProfile = JSON.parse(localStorage.getItem('profile'));
@@ -25,26 +22,27 @@ export const ContactsPage = () => {
   }
   
   //currentUserID = usernameProfile.data.sub;
-  const navigate = useNavigate();
-  const logout = ()=>{
-    dispatch(logOut());
-    navigate('/auth');
-    dispatch(clearContacts());
-    dispatch(clearAppointments());
+  
+  // const logout = ()=>{
+  //   dispatch(logOut());
+  //   navigate('/auth');
+  //   dispatch(clearContacts());
+  //   dispatch(clearAppointments());
     
-  }  
+  // }  
   
   useEffect(()=>{ 
-    const token = usernameProfile.token;
+    // const token = usernameProfile.token;
 
-    if(token){
-      const decodeToken = decode(token);
-      if(decodeToken.exp * 1000 < new Date().getTime()) logout();
-    }
+    // if(token){
+    //   const decodeToken = decode(token);
+    //   if(decodeToken.exp * 1000 < new Date().getTime()) logout();
+    // }
+    
     dispatch(getContacts(currentUserID));
     dispatch(getAppointments(currentUserID));
     dispatch(setCurrentUserId(currentUserID));
-  });
+  },[dispatch,currentUserID]);
  
   
   
