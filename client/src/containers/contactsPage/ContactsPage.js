@@ -44,7 +44,7 @@ export const ContactsPage = () => {
     dispatch(getContacts(currentUserID));
     dispatch(getAppointments(currentUserID));
     dispatch(setCurrentUserId(currentUserID));
-  },[]);
+  });
  
   
   
