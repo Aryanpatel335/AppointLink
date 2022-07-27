@@ -13,7 +13,7 @@ export const AppointmentsPage = () => {
   const appointments = useSelector(appointmentsStateSelector);
   const currentAppointmentId = useSelector(currentAppointmentIdSelector);
   const usernameProfile = JSON.parse(localStorage.getItem('profile'));
-  
+  const checkCurrentId = useSelector((state) => state.auth.currentUserId);
   let currentUserID;
   const dispatch = useDispatch();
   if(usernameProfile === null){
@@ -36,19 +36,29 @@ export const AppointmentsPage = () => {
       return(<h2>Add Appointment</h2>);
     }
   }
+  const renderMiscActivity = ()=>{
+    if(!checkCurrentId){
+      return(<h1>PLEASE LOGIN WITH VALID CREDENTIALS</h1>);
+    }
+  }
 
   return (
     <div className="mainbody">
-      <NavBar/>
-      <section>
-        {renderAppointmentHeader()}
-        <AppointmentForm/>
-      </section>
-      <hr />
-      <section>
-        <h2>Appointments</h2>
-        <AppointmentTilesList tiles={appointments}/>
-      </section>
+      {renderMiscActivity()}
+      {currentUserID && 
+      <>
+        <NavBar/>
+        <section>
+          {renderAppointmentHeader()}
+          <AppointmentForm/>
+        </section>
+        <hr />
+        <section>
+          <h2>Appointments</h2>
+          <AppointmentTilesList tiles={appointments}/>
+        </section>
+      </>
+      }
     </div>
   );
 };

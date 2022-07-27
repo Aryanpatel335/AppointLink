@@ -12,7 +12,8 @@ import { setCurrentUserId } from "../../store/authSlice";
 import './ContactsPage.css'
 export const ContactsPage = () => {
   const usernameProfile = JSON.parse(localStorage.getItem('profile'));
- 
+  const checkCurrentId = useSelector((state) => state.auth.currentUserId);
+  
   let currentUserID;
   const dispatch = useDispatch();
   if(usernameProfile === null){
@@ -59,12 +60,19 @@ export const ContactsPage = () => {
   }
   
   
-  
+  const renderMiscActivity = ()=>{
+    if(!checkCurrentId){
+      return(<h1>PLEASE LOGIN WITH VALID CREDENTIALS</h1>);
+    }
+  }
   
   return (
+    
     <div className="mainbody">
-      
-      <NavBar/>
+      {renderMiscActivity()}
+      {checkCurrentId && 
+      <>
+        <NavBar/>
       <section>
         {renderHeader()}
         <ContactForm/> 
@@ -74,6 +82,9 @@ export const ContactsPage = () => {
         <h2>Contacts</h2>
         <TileList tiles={contacts}/>
       </section>
+      </>
+      }
+
     </div>
-  );
+  )
 };
