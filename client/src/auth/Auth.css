@@ -1,0 +1,135 @@
+
+*{
+    margin: 0;
+}
+.mainBody{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: #04a8da;
+    box-sizing: border-box;
+    padding-right: 100px;
+    
+}
+
+.formLogin{
+    margin-top: 40px;
+    
+}
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 100px;
+    
+}
+.container .form{
+    padding:30px;
+
+}
+.inputs{
+    display: flex;
+   
+
+}
+.buttns{
+    
+    
+    justify-content: center;
+}
+.icon{
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: center;
+}
+.googleBtn{
+    margin-top: 30px;
+    margin-left: 20%;
+    
+}
+.btn{
+    display: block;
+    margin-top: 25px;
+    border: transparent;
+    background-color: #04a8da;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 20px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #03a6d86e;
+
+}
+
+
+.promptsign{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: white;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.promptsign:hover{
+    cursor: pointer;
+    background-color: #03a6d86e;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+.error{
+    text-align: center;
+    margin-top: 5px;
+    background-color: rgba(255, 0, 0, 0.403);
+    padding: 10px 0;
+    font-weight:bold;
+    border-radius: 10px;
+}
+.banner{
+    display: flex;
+    font-size: 50px;
+    margin-left: 200px;
+    width: 100%;
+}
+.bannerIcon{
+    margin-top: 10px;
+    margin-right: 70px;
+    font-size:80px;
+}
+
+@media only screen and (min-width: 2300px) {
+    .container {
+      transform: scale(1.4);
+      
+    }
+    .mainBody{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        background-color: #04a8da;
+        box-sizing: border-box;
+        padding: 200px;
+        
+    }
+    .banner{
+        transform: scale(1.5);
+        margin-left: 600px;
+
+    }
+    
+    
+}

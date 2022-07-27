@@ -1,0 +1,152 @@
+#root {
+      
+
+      font-family: "Open Sans", sans-serif;
+      
+}
+
+nav > a {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      color: #000000;
+      margin-right: 50px;
+      text-decoration-line: none;
+}
+nav > a.active {
+      background-color: #04a8da ;
+      border-radius: 5px;
+      padding : 10px 10px;
+      color:white;
+      font-weight: bold;
+      
+
+}
+nav {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #979797;
+      margin-bottom: 20px;
+
+      
+}
+h1{
+      text-align: center;
+}
+h2 {
+      font-weight: bold;
+      font-size: 18px;
+      color: #000000;
+      margin: 0;
+      margin-bottom: 18px;
+}
+
+hr {
+      border: none;
+      border-top: 1px solid #979797;
+      margin: 20px 0;
+      
+}
+input[type="submit"] {
+      background: #04a8da;
+      border-radius: 4px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      padding: 10px 0;
+      width: 100%;
+      font-family: "Open Sans", sans-serif;
+      margin-top: 10px;
+      margin-bottom: 0px;
+}
+input[type="submit"]:hover{
+      cursor: pointer;
+}
+
+input {
+      font-family: "Open Sans", sans-serif;
+      background: #ffffff;
+      border: 1px solid #979797;
+      border-radius: 4px;
+      padding: 7px 9.5px 9px 9.5px;
+      outline: none;
+      width: 98.5%;
+      margin-bottom: 10px;
+      
+}
+select{
+      font-family: "Open Sans", sans-serif;
+      background: #ffffff;
+      border: 1px solid #979797;
+      border-radius: 4px;
+      padding: 7px 9.5px 9px 9.5px;
+      outline: none;
+      width: 100%;
+      margin-bottom: 10px;
+}
+.tile {
+      
+      margin: 0;
+      font-size: 14px;
+      
+      padding-left: 10px;
+      margin-top: 10px;
+}
+.tile.tile-title {
+      
+      font-weight: bold;
+
+}
+.tile-container {
+      
+      margin-right: 35px;
+      border:5px solid black;
+      padding:10px 10px;
+      width: 200px;
+      height: 150px;
+      border-radius: 25px;
+      box-shadow: 8px 8px grey;
+}
+.tile-container-appointment{
+      margin-right: 20px;
+      border:5px solid black;
+      padding:10px 10px;
+      width: 200px;
+      height: 200px;
+      border-radius: 25px;
+      box-shadow: 8px 8px grey;
+}
+
+.tileDisplay{
+      display: flex;
+      
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #04a8da;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #03a6d86e;
+}
+.errorForm{
+text-align: center;
+    margin-top: 5px;
+    background-color: rgba(255, 0, 0, 0.403);
+    padding: 10px 0;
+    font-weight:bold;
+    border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+.editDelete{
+    background-color: transparent;
+    border: transparent;
+    padding: 10px;
+    margin-left: 35px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+.editDelete:hover{
+    background-color: #03a6d86e;
+    cursor: pointer;
+}
+.editDeleteAppoint{
+    background-color: transparent;
+    border: transparent;
+    padding: 10px;
+    margin-left: 42px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+.editDeleteAppoint:hover{
+    background-color: #03a6d86e;
+    cursor: pointer;
+}
+.delete:hover{
+    background-color: rgba(255, 0, 0, 0.603);
+    cursor: pointer;
+}
