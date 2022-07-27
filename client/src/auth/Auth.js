@@ -29,7 +29,7 @@ export const Auth = () => {
         dispatch(clearAppointments());
        
 
-    },[dispatch,navigate])
+    },[dispatch])
     const renderLoginStatus = ()=>{
         if(errorState){
             return(
