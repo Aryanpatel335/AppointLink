@@ -19,7 +19,7 @@ export const Auth = () => {
     const location = useLocation();
     const [formData, setFormData] = useState({firstName: '', lastName: '', username: '', password: '', confirmPassword: '' });
     const errorState = useSelector(errorSelector);
-    if(location.pathname === '/auth'){
+    if(location.pathname === '/'){
         localStorage.clear();
     }
     useEffect(()=>{

@@ -42,7 +42,7 @@ export default authSlice.reducer;
 export const { setAuthData, logOut, setOurOwnAuthData, setCurrentUserId, setErrorMessage } = authSlice.actions;
 
 export const errorSelector = (state) => state.auth.errorMessage;
-
+export const currentId = (state) => state.auth.currentUserId;
 export const googleSignIn = (formData,navigate) => async(dispatch) =>{
     try{
         const userId = formData.data.sub;

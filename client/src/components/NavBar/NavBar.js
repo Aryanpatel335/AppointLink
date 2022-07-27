@@ -25,7 +25,7 @@ export const NavBar = () => {
     // userName = user.username;  
     const logout = ()=>{
       dispatch(logOut());
-      navigate('/auth');
+      navigate('/');
       dispatch(clearContacts());
       dispatch(clearAppointments());
       setUser(null);
