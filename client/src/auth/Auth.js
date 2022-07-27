@@ -24,12 +24,12 @@ export const Auth = () => {
     }
     useEffect(()=>{
         dispatch(logOut());
-        navigate('/auth');
+        
         dispatch(clearContacts());
         dispatch(clearAppointments());
        
 
-    },[dispatch,navigate])
+    },[dispatch])
     const renderLoginStatus = ()=>{
         if(errorState){
             return(
