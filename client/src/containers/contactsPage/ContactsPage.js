@@ -36,6 +36,7 @@ export const ContactsPage = () => {
   
   useEffect(()=>{ 
     const token = usernameProfile.token;
+
     if(token){
       const decodeToken = decode(token);
       if(decodeToken.exp * 1000 < new Date().getTime()) logout();
@@ -43,7 +44,7 @@ export const ContactsPage = () => {
     dispatch(getContacts(currentUserID));
     dispatch(getAppointments(currentUserID));
     dispatch(setCurrentUserId(currentUserID));
-  },[dispatch ]);
+  });
  
   
   
