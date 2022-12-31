@@ -1,3 +1,3 @@
 # PLANNER
-# Due to Heroku no longer be free the application no longer works
+## Due to Heroku no longer being free the link no longer works
 # Deployed at: https://plannerapplication.netlify.app/
