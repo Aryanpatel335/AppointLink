@@ -1,2 +1,2 @@
 # AppointLink
-## Due to Heroku no longer deployed :(
+## Due to Heroku no longer being free this is not deployed :(
